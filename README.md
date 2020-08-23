@@ -19,7 +19,7 @@ f <- dnorm(x = x, mean = 5, sd = 2)
 plot(x, f, type = 'l', ylab = 'density', main = 'Target distribution')
 ```
 
-![](MCMC_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
 It starts with an arbitrary sample.
 
@@ -35,7 +35,7 @@ plot(x, f, type = 'l', ylab = 'density', main = 'Initial sample')
 abline(v = x_t)
 ```
 
-![](MCMC_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 Then it draws a sample from a given symmetric proposal distribution,
 centered at the previous sample.
@@ -55,7 +55,7 @@ lines(x, g)
 abline(v = x_prime, lty = 2)
 ```
 
-![](MCMC_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 An acceptance ratio is calculated from the target densities at the
 candidate and previous sample-points. The candidate is then added to the
@@ -84,7 +84,7 @@ abline(
 )
 ```
 
-![](MCMC_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 ``` r
 # Add to sample
@@ -117,7 +117,7 @@ add_sample <- function(s) {
 }
 ```
 
-![](MCMC_files/figure-gfm/unnamed-chunk-7-.gif)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-7-.gif)<!-- -->
 
 Next I should prove the convergence mathematically?
 
